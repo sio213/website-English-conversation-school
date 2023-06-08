@@ -107,6 +107,10 @@
     color: var(--white);
   }
 
+  .subheading-title-area {
+    margin-top: 64px;
+  }
+
   .subheading-title-layout {
     text-align: center;
     max-width: 560px;
@@ -194,7 +198,206 @@
           border: 3px solid var(--white);
         }
       }
-
     }
   }
 }
+
+// スクール検索＋講師紹介＋生徒の声のエリア設定
+.two-column-layout {
+  max-width: 1160px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .section-title-layout {
+    padding-top: 16px;
+  }
+}
+
+// スクール検索
+.school-search-area-layout {
+  min-width: 560px;
+  height: 660px;
+  background-color: var(--sub-color-2);
+  position: relative;
+
+  &::before {
+    content: '';
+    background-image: url(../img/japan-map.svg);
+    width: 523px;
+    height: 550px;
+    object-fit: contain;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -41%);
+  }
+
+  .school-search-btn-and-text-area {
+    position: relative;
+    z-index: 10;
+
+    .school-search-btn-area {
+      width: 324px;
+      margin-left: 24px;
+
+      .school-search-btn-list {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        li {
+          margin-bottom: 24px;
+        }
+
+        // スクール検索用ボタン
+        .school-search-btn {
+          display: flex;
+          width: 150px;
+          height: 50px;
+          justify-content: center;
+          align-items: center;
+          border: 1px solid var(--text-color);
+          background-color: var(--white);
+
+          &:hover {
+            border: 1px solid var(--main-color);
+            background-color: var(--main-color);
+            color: var(--white);
+          }
+        }
+      }
+    }
+
+    .school-search-text {
+      max-width: 290px;
+      position: absolute;
+      bottom: -250px;
+      right: 32px;
+      text-align: center;
+    }
+  }
+}
+
+// 講師の紹介＋生徒の声のエリア設定
+.two-column-layout-right-side {
+  min-width: 560px;
+  height: 660px;
+
+  section:first-of-type {
+    padding-bottom: 32px;
+  }
+
+  section:last-of-type {
+    padding-top: 0;
+  }
+}
+
+// 講師の紹介
+.teacher-profile {
+  width: 560px;
+  padding: 0 24px 32px;
+  display: flex;
+
+  .teacher-img {
+    margin-right: 32px;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow-y: clip;
+
+    img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      object-position: 25% 0;
+      display: inline-block;
+    }
+  }
+
+  .teacher-introduce {
+
+    h4 {
+      margin-bottom: 24px;
+    }
+
+    .teacher-detail-btn {
+      padding: 12px 0;
+      display: inline-block;
+      margin-top: 32px;
+
+      a {
+        padding: 12px 48px;
+
+        &::after {
+          width: var(--font-size-14);
+          height: var(--font-size-14);
+          vertical-align: -5%;
+          margin-left: var(--font-size-14);
+        }
+      }
+    }
+  }
+}
+
+// 受講生の声
+.students-voice-area-layout {
+  width: 560px;
+  height: 174px;
+
+  .students-voice-area-link {
+    width: 560px;
+    height: 174px;
+    border: 0.5px solid var(--text-color);
+    padding: 24px 32px;
+    position: absolute;
+  
+    h2 {
+      font-size: var(--font-size-30);
+      font-weight: var(--font-weight-bold);
+      letter-spacing: var(--character-spacing-3);
+      color: var(--main-color);
+      text-align: left;
+      
+  
+      &::after {
+        content: '';
+        display: inline-block;
+        background-image: url(../img/speech-bubble.png);
+        background-size: cover;
+        width: var(--font-size-30);
+        height: var(--font-size-30);
+        vertical-align: text-bottom;
+      }
+    }
+  
+    .students-voice-contents {
+      display: flex;
+  
+      p {
+        padding-top: 24px;
+      }
+  
+      .students-voice-img {
+        position: absolute;
+        top: 2px;
+        right: 32px;
+        width: 170px;
+        height: 170px;
+        overflow: hidden;
+  
+        img {
+          width: 280px;
+          height: 280px;
+          object-fit: cover;
+          object-position: 120%;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
