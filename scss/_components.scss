@@ -1,0 +1,42 @@
+// ホバー時にリンクに下線をつける場合の設定
+.link-underline {
+  border: none;
+
+  &:hover {
+    border-bottom: 1px solid var(--text-color);
+  }
+}
+
+// セクションタイトルのレイアウト
+.section-title-layout {
+  margin: 0 auto 64px;
+  text-align: center;
+}
+
+// 英字、数字の大文字化
+.upper-text {
+  text-transform: uppercase;
+}
+
+// ボタンの共通設定（ここからそれぞれのボタン用に変更する）
+// ※ただしスクール検索用ボタンは除く
+.btn-default {
+  border: 1px solid var(--text-color);
+
+  &::after {
+    content: '';
+    background-image: url(../img/arrow.png);
+    display: inline-block;
+    background-size: cover;
+  }
+
+  &:hover {
+    border: 1px solid var(--main-color);
+    background-color: var(--main-color);
+    color: var(--white);
+  
+    &::after {
+      background-image: url(../img/arrow-white.png);
+    }
+  }
+}

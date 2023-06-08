@@ -1,0 +1,200 @@
+// メインビジュアル
+.mv-area {
+  max-width: 1160px;
+  height: 500px;
+  margin: 120px auto 0;
+
+  .mv-img-area img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: 50% 25%;
+    position: relative;
+  }
+
+  .mv-text-area {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    // 高さ500pxのimgに対して180pxの高さの透過背景を重ねる。
+    // 中央に調整するため、180/500 = 0.36を利用しtranlateY=-64%としている。
+    transform: translate(-50%, -64%);
+
+    .mv-text-background-area {
+      min-width: 600px;
+      height: 180px;
+      background-color: var(--white);
+      opacity: 0.75;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+
+    .mv-catchcopy {
+      min-width: 600px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      img {
+        width: 98px;
+        height: auto;
+        margin: 32px auto 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      .catchcopy-text {
+        margin: 21px auto 32px;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+// 人気のヒミツ
+.popular-secret-area {
+  .popular-secret-area-layout {
+    max-width: 760px;
+    margin: 0 auto;
+
+    .popular-secret-contents-area {
+      display: flex;
+      margin-bottom: 56px;
+      max-width: 720px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      img {
+        max-width: 220px;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 50%;
+        align-items: center;
+      }
+
+      .popular-secret-text-area {
+        min-height: 220px;
+
+        .popular-secret-contents-title {
+          margin: 32px 40px 24px;
+        }
+
+        .popular-secret-contents-text {
+          margin: 0 40px 32px;
+        }
+      }
+
+      &:nth-child(odd) {
+        flex-direction: row-reverse;
+        margin-right: 0;
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+// レッスン紹介
+.lesson-area {
+  background-color: var(--main-color);
+
+  .section-title-medium,
+  .subheading-title-area>.font-size-xl-medium {
+    color: var(--white);
+  }
+
+  .subheading-title-layout {
+    text-align: center;
+    max-width: 560px;
+    margin: 0 auto;
+
+    .border-bottom-line {
+      display: block;
+      margin: 8px auto 64px;
+      border-bottom: 2px solid var(--white);
+    }
+  }
+
+  .lesson-contents-area {
+    max-width: 960px;
+    background-color: var(--white);
+    margin: 48px auto;
+    display: flex;
+
+    .lesson-img {
+      min-height: 264px;
+
+      img {
+        max-width: 360px;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .lesson-text {
+      padding: 32px 40px;
+      text-align: left;
+      position: relative;
+
+      .lesson-contents-title {
+        margin-bottom: 16px;
+      }
+
+      // レッスンの詳細ページへ飛ぶボタン
+      .lesson-detail-btn {
+        padding: 12px 0;
+        display: inline-block;
+        position: absolute;
+        bottom: 32px;
+        right: 40px;
+
+        a {
+          padding: 12px 48px;
+
+          &::after {
+            width: var(--font-size-14);
+            height: var(--font-size-14);
+            vertical-align: -5%;
+            margin-left: var(--font-size-14);
+          }
+        }
+      }
+    }
+  }
+
+  // その他のレッスンから探すボタン
+  .lesson-search-btn-area {
+    display: flex;
+    justify-content: space-between;
+    max-width: 960px;
+    margin: 0 auto;
+
+    .lesson-search-btn {
+      background-color: var(--white);
+
+      a {
+        display: flex;
+        width: 360px;
+        height: 60px;
+        justify-content: center;
+        align-items: center;
+
+        &::after {
+          width: var(--font-size-20);
+          height: var(--font-size-20);
+          vertical-align: -10%;
+          margin-left: var(--font-size-20);
+        }
+
+        &:hover {
+          border: 3px solid var(--white);
+        }
+      }
+
+    }
+  }
+}

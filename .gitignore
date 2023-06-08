@@ -1,0 +1,5 @@
+#.vocodeフォルダを無視する
+/.vscode
+
+#.DS_Storeを無視する
+.DS_Store

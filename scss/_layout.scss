@@ -1,0 +1,193 @@
+@use './variables';
+
+// ヘッダー共通
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--white);
+  z-index: 10000;
+}
+
+.header-area {
+  height: 70px;
+  margin: 0 auto;
+  border-bottom: 2px solid var(--sub-color-2);
+
+  .header-contents-area {
+    max-width: 1160px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    // ヘッダーロゴ
+    .header-logo {
+      a {
+        display: flex;
+        height: 70px;
+        align-items: center;
+
+        img {
+          height: 40px;
+          text-align: center;
+          margin: 15px auto;
+        }
+      }
+    }
+
+    // ヘッダー内のナビゲーションリスト
+    .header-nav-list,
+    .header-nav-sub-list-newline {
+      display: flex;
+    }
+
+    .header-nav-list {
+      li {
+        justify-content: space-between;
+        margin: 0 .5em;
+      }
+
+      &>li:first-of-type {
+        margin-left: 0;
+      }
+
+      &>li:last-of-type {
+        margin-right: 0;
+      }
+
+      // 電話番号
+      .tel-text {
+        font-size: var(--font-size-14);
+        text-align: center;
+      }
+
+      .tel-number {
+        display: flex;
+
+        a {
+          text-align: center;
+          letter-spacing: var(--character-spacing-1-8);
+          cursor: default;
+          pointer-events: none;
+
+          &::before {
+            content: '';
+            display: inline-block;
+            background-image: url(../img/free-call-icon.svg);
+            background-size: cover;
+            width: 30px;
+            height: 23.85px;
+            margin-right: 8px;
+            vertical-align: text-bottom;
+          }
+        }
+      }
+
+      // 2段になるナビゲーション
+      .header-nav-sub-list {
+
+        // ナビの上段
+        .header-nav-sub-list-newline {
+          justify-content: space-evenly;
+          height: 30px;
+        }
+
+        // ナビの下段（受講生ログイン）
+        .signin-btn {
+          height: 34px;
+
+          a {
+            display: block;
+            height: 34px;
+            background-color: var(--main-color);
+            margin: 0 auto;
+
+            p {
+              text-align: center;
+              font-size: var(--font-size-16);
+              line-height: var(--line-spacing-24);
+              letter-spacing: var(--character-spacing-0);
+              font-weight: var(--font-weight-medium);
+              color: var(--white);
+              vertical-align: bottom;
+              height: 24px;
+              padding: 5px 16px;
+
+              &::before {
+                content: '';
+                display: inline-block;
+                background-image: url(../img/signin-icon-white.png);
+                background-size: cover;
+                width: 20px;
+                height: 20px;
+                margin-right: 12px;
+                vertical-align: middle;
+              }
+            }
+
+            &:hover {
+              background-color: var(--white);
+              border: 3px solid var(--main-color);
+
+              p {
+                color: var(--main-color);
+                padding: 2px 0;
+
+                &::before {
+                  background-image: url(../img/signin-icon.png);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      // 無料体験レッスン申込み
+      .trial-lesson-btn {
+        a {
+          display: flex;
+          height: 58px;
+          background-color: var(--sub-color);
+          color: var(--white);
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+          padding: 5px 16px;
+          margin: 6px 0;
+
+          &:hover {
+            background-color: var(--white);
+            border: 3px solid var(--sub-color);
+            color: var(--sub-color);
+            padding: 5px 13px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// メニュー用ナビゲーション
+.nav-menu-area {
+  width: 100%;
+  height: 50px;
+
+  .nav-menu-list {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+
+      a {
+        text-align: center;
+      }
+    }
+  }
+}
