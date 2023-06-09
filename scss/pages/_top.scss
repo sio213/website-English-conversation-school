@@ -1,3 +1,5 @@
+@use '../mixins' as *;
+
 // メインビジュアル
 .mv-area {
   max-width: 1160px;
@@ -98,6 +100,20 @@
   }
 }
 
+@include mq(lg) {
+  .popular-secret-area {
+    .popular-secret-area-layout {
+      .popular-secret-contents-area {
+        margin-left: 2.5%;
+
+        &:nth-child(odd) {
+          margin-right: 2.5%;
+        }
+      }
+    }
+  }
+}
+
 // レッスン紹介
 .lesson-area {
   background-color: var(--main-color);
@@ -105,6 +121,10 @@
   .section-title-medium,
   .subheading-title-area>.pc-font-size-xl-medium {
     color: var(--white);
+  }
+
+  .sp-only-br {
+    display: none;
   }
 
   .subheading-title-area {
@@ -142,19 +162,19 @@
     .lesson-text {
       padding: 32px 40px;
       text-align: left;
-      position: relative;
 
       .lesson-contents-title {
         margin-bottom: 16px;
       }
 
+      .lesson-contents-text {
+        margin-bottom: 48px;
+      }
+
       // レッスンの詳細ページへ飛ぶボタン
       .lesson-detail-btn {
-        padding: 12px 0;
-        display: inline-block;
-        position: absolute;
-        bottom: 32px;
-        right: 40px;
+        display: flex;
+        justify-content: end;
 
         a {
           padding: 12px 48px;
@@ -203,14 +223,41 @@
   }
 }
 
+@include mq {
+  .lesson-area {
+
+    .lesson-contents-area
+    , .lesson-search-btn-area {
+      width: 95%;
+    }
+  }
+}
+
+@include mq(lg) {
+  .lesson-area {
+
+    .sp-only-br {
+      display: block;
+    }
+
+    .lesson-contents-area {
+      .lesson-img img {
+        width: 37.5vw;
+      }
+    
+      .lesson-text .lesson-contents-text {
+        margin-bottom: 32px;
+      }
+    }
+  }
+}
+
 // スクール検索＋講師紹介＋生徒の声のエリア設定
 .two-column-layout {
-  max-width: 1160px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
-  // TODO 1160px以下の時に設定を変更する
-  //flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 
   .section-title-layout {
     padding-top: 16px;
@@ -219,7 +266,7 @@
 
 // スクール検索
 .school-search-area-layout {
-  width: 560px;
+  min-width: 560px;
   height: 660px;
   background-color: var(--sub-color-2);
   position: relative;
@@ -287,7 +334,6 @@
 // 講師の紹介＋生徒の声のエリア設定
 .two-column-layout-right-side {
   width: 560px;
-  height: 660px;
 
   section:first-of-type {
     padding-bottom: 32px;
@@ -295,6 +341,7 @@
 
   section:last-of-type {
     padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -321,18 +368,18 @@
   }
 
   .teacher-introduce {
-
     h4 {
       margin-bottom: 24px;
     }
 
     .teacher-detail-btn {
-      padding: 12px 0;
-      display: inline-block;
       margin-top: 32px;
 
       a {
-        padding: 12px 48px;
+        display: inline-block;
+        width: 320px;
+        padding: 12px 0;
+        text-align: center;
 
         &::after {
           width: var(--font-size-14);
@@ -348,11 +395,11 @@
 // 受講生の声
 .students-voice-area-layout {
   width: 560px;
-  height: 174px;
+  height: 172px;
 
   .students-voice-area-link {
     width: 560px;
-    height: 174px;
+    height: 172px;
     border: 0.5px solid var(--text-color);
     padding: 24px 32px;
     position: absolute;
@@ -430,10 +477,18 @@
 
   .info-title {
     position: absolute;
-    bottom: 24px;
+    top: 36px;
     left: 220px;
+    margin-right: 32px;
   }
 }
+
+@include mq() {
+  .information-contents-area {
+    width: 95%;
+  }
+}
+
 
 // バナー 
 // ※今はまだ画像がないのでダミーでエリアのみ作成(サイズ変更の可能性あり)
@@ -441,8 +496,7 @@
   max-width: 1160px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
-  // TODO 1160px以下の時に設定を変更する
-  //flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 

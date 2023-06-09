@@ -1,0 +1,16 @@
+@mixin mq($breakpoint: md) {
+
+  $maxWidth: 1160px;
+
+  @if $breakpoint == lg {
+    $maxWidth: 960px;
+  }
+
+  @if $breakpoint == Md {
+    $maxWidth: 768px;
+  }
+
+  @media screen and (max-width: $maxWidth) {
+    @content;
+  }
+}

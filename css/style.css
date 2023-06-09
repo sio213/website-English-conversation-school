@@ -648,12 +648,23 @@ footer .copyright {
   margin-left: auto;
 }
 
+@media screen and (max-width: 960px) {
+  .popular-secret-area .popular-secret-area-layout .popular-secret-contents-area {
+    margin-left: 2.5%;
+  }
+  .popular-secret-area .popular-secret-area-layout .popular-secret-contents-area:nth-child(odd) {
+    margin-right: 2.5%;
+  }
+}
 .lesson-area {
   background-color: var(--main-color);
 }
 .lesson-area .section-title-medium,
 .lesson-area .subheading-title-area > .pc-font-size-xl-medium {
   color: var(--white);
+}
+.lesson-area .sp-only-br {
+  display: none;
 }
 .lesson-area .subheading-title-area {
   margin-top: 64px;
@@ -686,17 +697,16 @@ footer .copyright {
 .lesson-area .lesson-contents-area .lesson-text {
   padding: 32px 40px;
   text-align: left;
-  position: relative;
 }
 .lesson-area .lesson-contents-area .lesson-text .lesson-contents-title {
   margin-bottom: 16px;
 }
+.lesson-area .lesson-contents-area .lesson-text .lesson-contents-text {
+  margin-bottom: 48px;
+}
 .lesson-area .lesson-contents-area .lesson-text .lesson-detail-btn {
-  padding: 12px 0;
-  display: inline-block;
-  position: absolute;
-  bottom: 32px;
-  right: 40px;
+  display: flex;
+  justify-content: end;
 }
 .lesson-area .lesson-contents-area .lesson-text .lesson-detail-btn a {
   padding: 12px 48px;
@@ -734,18 +744,34 @@ footer .copyright {
   border: 3px solid var(--white);
 }
 
+@media screen and (max-width: 1160px) {
+  .lesson-area .lesson-contents-area, .lesson-area .lesson-search-btn-area {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 960px) {
+  .lesson-area .sp-only-br {
+    display: block;
+  }
+  .lesson-area .lesson-contents-area .lesson-img img {
+    width: 37.5vw;
+  }
+  .lesson-area .lesson-contents-area .lesson-text .lesson-contents-text {
+    margin-bottom: 32px;
+  }
+}
 .two-column-layout {
-  max-width: 1160px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 .two-column-layout .section-title-layout {
   padding-top: 16px;
 }
 
 .school-search-area-layout {
-  width: 560px;
+  min-width: 560px;
   height: 660px;
   background-color: var(--sub-color-2);
   position: relative;
@@ -804,13 +830,13 @@ footer .copyright {
 
 .two-column-layout-right-side {
   width: 560px;
-  height: 660px;
 }
 .two-column-layout-right-side section:first-of-type {
   padding-bottom: 32px;
 }
 .two-column-layout-right-side section:last-of-type {
   padding-top: 0;
+  padding-bottom: 0;
 }
 
 .teacher-profile {
@@ -838,12 +864,13 @@ footer .copyright {
   margin-bottom: 24px;
 }
 .teacher-profile .teacher-introduce .teacher-detail-btn {
-  padding: 12px 0;
-  display: inline-block;
   margin-top: 32px;
 }
 .teacher-profile .teacher-introduce .teacher-detail-btn a {
-  padding: 12px 48px;
+  display: inline-block;
+  width: 320px;
+  padding: 12px 0;
+  text-align: center;
 }
 .teacher-profile .teacher-introduce .teacher-detail-btn a::after {
   width: var(--font-size-14);
@@ -854,11 +881,11 @@ footer .copyright {
 
 .students-voice-area-layout {
   width: 560px;
-  height: 174px;
+  height: 172px;
 }
 .students-voice-area-layout .students-voice-area-link {
   width: 560px;
-  height: 174px;
+  height: 172px;
   border: 0.5px solid var(--text-color);
   padding: 24px 32px;
   position: absolute;
@@ -925,13 +952,20 @@ footer .copyright {
 }
 .information-contents-area .info-title {
   position: absolute;
-  bottom: 24px;
+  top: 36px;
   left: 220px;
+  margin-right: 32px;
 }
 
+@media screen and (max-width: 1160px) {
+  .information-contents-area {
+    width: 95%;
+  }
+}
 .banner-area-layout {
   max-width: 1160px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }/*# sourceMappingURL=style.css.map */
