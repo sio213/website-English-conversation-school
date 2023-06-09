@@ -103,7 +103,7 @@
   background-color: var(--main-color);
 
   .section-title-medium,
-  .subheading-title-area>.font-size-xl-medium {
+  .subheading-title-area>.pc-font-size-xl-medium {
     color: var(--white);
   }
 
@@ -186,6 +186,7 @@
         height: 60px;
         justify-content: center;
         align-items: center;
+        border-color: var(--white);
 
         &::after {
           width: var(--font-size-20);
@@ -208,7 +209,8 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  // TODO 1160px以下の時に設定を変更する
+  //flex-wrap: wrap;
 
   .section-title-layout {
     padding-top: 16px;
@@ -217,7 +219,7 @@
 
 // スクール検索
 .school-search-area-layout {
-  min-width: 560px;
+  width: 560px;
   height: 660px;
   background-color: var(--sub-color-2);
   position: relative;
@@ -284,7 +286,7 @@
 
 // 講師の紹介＋生徒の声のエリア設定
 .two-column-layout-right-side {
-  min-width: 560px;
+  width: 560px;
   height: 660px;
 
   section:first-of-type {
@@ -399,5 +401,48 @@
       }
     }
   }
+}
+
+// インフォメーション
+.information-contents-area {
+  width: 960px;
+  margin: 0 auto;
+
+  .info-content {
+    position: relative;
+  }
+
+  .info-category-date-layout {
+    display: flex;
+    margin: 24px 32px;
+
+    .info-category {
+      margin: 30px 32px 24px 0;
+
+      h3 {
+        letter-spacing: var(--character-spacing-1-4);
+        vertical-align: center;
+        text-align: center;
+        color: var(--white);
+      }
+    }
+  }
+
+  .info-title {
+    position: absolute;
+    bottom: 24px;
+    left: 220px;
+  }
+}
+
+// バナー 
+// ※今はまだ画像がないのでダミーでエリアのみ作成(サイズ変更の可能性あり)
+.banner-area-layout {
+  max-width: 1160px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  // TODO 1160px以下の時に設定を変更する
+  //flex-wrap: wrap;
 }
 
