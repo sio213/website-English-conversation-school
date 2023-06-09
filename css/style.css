@@ -86,7 +86,7 @@
   font-style: var(--font-style-normal);
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-14);
-  line-height: var(--line-spacing-24);
+  line-height: var(--line-spacing-28);
   letter-spacing: var(--character-spacing-1-4);
   color: var(--text-color);
 }
@@ -167,6 +167,16 @@
   font-weight: var(--font-weight-normal);
   font-size: var(--font-size-14);
   line-height: var(--line-spacing-32);
+  letter-spacing: var(--character-spacing-0);
+  color: var(--text-color);
+}
+
+.pc-font-size-xs-normal-sitemap {
+  font-family: var(--font-family-source-han-sans-jp);
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-normal);
+  font-size: var(--font-size-14);
+  line-height: var(--line-spacing-28);
   letter-spacing: var(--character-spacing-0);
   color: var(--text-color);
 }
@@ -526,11 +536,14 @@ header {
 }
 
 .site-map-area-layout {
-  width: 960px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 .site-map-area-layout .site-map-title-list li {
   margin: 24px 0;
+}
+.site-map-area-layout .site-map-title-list .site-map-sub-title-list li:last-of-type {
+  margin-bottom: 0;
 }
 .site-map-area-layout .site-map-title-list .site-map-flex-pc-only {
   display: flex;
@@ -574,6 +587,7 @@ footer .copyright {
   max-width: 1160px;
   height: 500px;
   margin: 120px auto 0;
+  position: relative;
 }
 .mv-area .mv-img-area img {
   width: 100%;
@@ -582,13 +596,12 @@ footer .copyright {
      object-fit: cover;
   -o-object-position: 50% 25%;
      object-position: 50% 25%;
-  position: relative;
 }
 .mv-area .mv-text-area {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -64%);
+  transform: translate(-50%, -50%);
 }
 .mv-area .mv-text-area .mv-text-background-area {
   min-width: 600px;
@@ -883,20 +896,22 @@ footer .copyright {
   display: flex;
 }
 .teacher-profile .teacher-img {
+  display: inline-table;
   margin-right: 32px;
   width: 160px;
   height: 160px;
   border-radius: 50%;
-  overflow-y: clip;
+  overflow: hidden;
 }
 .teacher-profile .teacher-img img {
-  width: 220px;
-  height: 220px;
+  width: 160px;
+  height: 160px;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 25% 0;
-     object-position: 25% 0;
+  -o-object-position: -5%;
+     object-position: -5%;
   display: inline-block;
+  transform: scale(1.2);
 }
 .teacher-profile .teacher-introduce h4 {
   margin-bottom: 24px;

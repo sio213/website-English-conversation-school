@@ -5,22 +5,20 @@
   max-width: 1160px;
   height: 500px;
   margin: 120px auto 0;
+  position: relative;
 
   .mv-img-area img {
     width: 100%;
     height: 500px;
     object-fit: cover;
     object-position: 50% 25%;
-    position: relative;
   }
 
   .mv-text-area {
     position: absolute;
     top: 50%;
     left: 50%;
-    // 高さ500pxのimgに対して180pxの高さの透過背景を重ねる。
-    // 中央に調整するため、180/500 = 0.36を利用しtranlateY=-64%としている。
-    transform: translate(-50%, -64%);
+    transform: translate(-50%, -50%);
 
     .mv-text-background-area {
       min-width: 600px;
@@ -390,20 +388,23 @@
   padding: 0 24px 32px;
   display: flex;
 
-  // TODO 画像がブラウザごとに正円にならないので要修正
   .teacher-img {
+    // WARNING 長方形の画像を拡大し正円として表示したかった為、displayにinline-tableを使用。
+    // TODO 本当にこの記述で正しいか要チェック(親要素のdisplay:flexが影響)
+    display: inline-table;
     margin-right: 32px;
     width: 160px;
     height: 160px;
     border-radius: 50%;
-    overflow-y: clip;
+    overflow: hidden;
 
     img {
-      width: 220px;
-      height: 220px;
+      width: 160px;
+      height: 160px;
       object-fit: cover;
-      object-position: 25% 0;
+      object-position: -5%;
       display: inline-block;
+      transform: scale(1.2);
     }
   }
 
@@ -559,3 +560,8 @@
     flex-wrap: wrap;
   }
 }
+
+// TODO 1.講師の画像がブラウザごとに正円にならずイレギュラーな方法を使用したため要確認！！
+// TODO 2.scssの中身がぐちゃぐちゃなので要修正
+// TODO 3.960px以下の場合のヘッター（スマホと同じ）、バナー、サイトマップ、フッター（ナビを2行にする）を修正
+// TODO 4.768px以下のレスポンシブ対応(全てスマホ用レイアウト)

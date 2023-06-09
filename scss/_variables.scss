@@ -88,7 +88,7 @@
   font-style: var(--font-style-normal);
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-14);
-  line-height: var(--line-spacing-24);
+  line-height: var(--line-spacing-28);
   letter-spacing: var(--character-spacing-1-4);
   color: var(--text-color);
 }
@@ -169,6 +169,16 @@
   font-weight: var(--font-weight-normal);
   font-size: var(--font-size-14);
   line-height: var(--line-spacing-32);
+  letter-spacing: var(--character-spacing-0);
+  color: var(--text-color);
+}
+
+.pc-font-size-xs-normal-sitemap {
+  font-family: var(--font-family-source-han-sans-jp);
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-normal);
+  font-size: var(--font-size-14);
+  line-height: var(--line-spacing-28);
   letter-spacing: var(--character-spacing-0);
   color: var(--text-color);
 }
