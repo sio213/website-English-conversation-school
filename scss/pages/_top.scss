@@ -264,9 +264,19 @@
   }
 }
 
+@include mq {
+  .two-column-layout {
+    display: block; 
+
+    .section-title-layout {
+      padding-top: 0;
+    }
+  }
+}
+
 // スクール検索
 .school-search-area-layout {
-  min-width: 560px;
+  width: 560px;
   height: 660px;
   background-color: var(--sub-color-2);
   position: relative;
@@ -281,7 +291,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -41%);
+    transform: translate(-49%, -40.8%);
   }
 
   .school-search-btn-and-text-area {
@@ -331,6 +341,18 @@
   }
 }
 
+@include mq {
+  .section-padding-bottom-reset {
+    padding: 120px 0;
+  }
+
+  .school-search-area-layout {
+    background-color: var(--white);
+    width: 768px;
+    margin: 0 auto;
+  }
+}
+
 // 講師の紹介＋生徒の声のエリア設定
 .two-column-layout-right-side {
   width: 560px;
@@ -345,9 +367,25 @@
   }
 }
 
+@include mq {
+  .two-column-layout-right-side {
+    width: auto;
+
+    section:first-of-type {
+      padding-bottom: 120px;
+      background-color: var(--sub-color-2);
+    }
+
+    section:last-of-type {
+      padding-top: 120px;
+      margin: 0 auto;
+    }
+  }
+}
+
 // 講師の紹介
 .teacher-profile {
-  width: 560px;
+  width: 100%;
   padding: 0 24px 32px;
   display: flex;
 
@@ -389,6 +427,17 @@
         }
       }
     }
+  }
+}
+
+@include mq {
+  .introducing-the-teacher-area-layout {
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  .teacher-profile {
+    padding: 0 40px;
   }
 }
 
@@ -450,6 +499,12 @@
   }
 }
 
+@include mq {
+  .students-voice-area-layout {
+    margin: 0 auto;
+  }
+}
+
 // インフォメーション
 .information-contents-area {
   width: 960px;
@@ -483,20 +538,22 @@
   }
 }
 
-@include mq() {
+@include mq {
   .information-contents-area {
     width: 95%;
   }
 }
 
-
 // バナー 
 // ※今はまだ画像がないのでダミーでエリアのみ作成(サイズ変更の可能性あり)
-.banner-area-layout {
-  max-width: 1160px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+.banner-area {
+  padding: 0 0 120px;
+  
+  .banner-area-layout {
+    max-width: 1160px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
 }
-
