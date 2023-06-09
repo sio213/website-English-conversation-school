@@ -252,7 +252,7 @@
   }
 }
 
-// スクール検索＋講師紹介＋生徒の声のエリア設定
+// スクール検索＋講師紹介＋受講生の声のエリア設定
 .two-column-layout {
   margin: 0 auto;
   display: flex;
@@ -353,7 +353,7 @@
   }
 }
 
-// 講師の紹介＋生徒の声のエリア設定
+// 講師の紹介＋受講生の声のエリア設定
 .two-column-layout-right-side {
   width: 560px;
 
@@ -481,7 +481,7 @@
   
       .students-voice-img {
         position: absolute;
-        top: 2px;
+        top: 0px;
         right: 32px;
         width: 170px;
         height: 170px;
@@ -548,7 +548,7 @@
 // ※今はまだ画像がないのでダミーでエリアのみ作成(サイズ変更の可能性あり)
 .banner-area {
   padding: 0 0 120px;
-  
+
   .banner-area-layout {
     max-width: 1160px;
     margin: 0 auto;

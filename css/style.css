@@ -960,7 +960,7 @@ footer .copyright {
 }
 .students-voice-area-layout .students-voice-area-link .students-voice-contents .students-voice-img {
   position: absolute;
-  top: 2px;
+  top: 0px;
   right: 32px;
   width: 170px;
   height: 170px;
