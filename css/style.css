@@ -81,6 +81,16 @@
   color: var(--white);
 }
 
+.pc-font-size-xs-bold-sitemap-title {
+  font-family: var(--font-family-source-han-sans-jp);
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-14);
+  line-height: var(--line-spacing-24);
+  letter-spacing: var(--character-spacing-1-4);
+  color: var(--text-color);
+}
+
 .pc-font-size-xl-medium {
   font-family: var(--font-family-source-han-sans-jp);
   font-style: var(--font-style-normal);
@@ -91,7 +101,7 @@
   color: var(--text-color);
 }
 
-.pc-font-size-lg-mediun {
+.pc-font-size-lg-medium {
   font-family: var(--font-family-source-han-sans-jp);
   font-style: var(--font-style-normal);
   font-weight: var(--font-weight-medium);
@@ -161,6 +171,16 @@
   color: var(--text-color);
 }
 
+.pc-font-size-xs-normal-footer {
+  font-family: var(--font-family-source-han-sans-jp);
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-normal);
+  font-size: var(--font-size-14);
+  line-height: var(--line-spacing-20);
+  letter-spacing: var(--character-spacing-0);
+  color: var(--white);
+}
+
 .pc-font-size-xs-normal-info-date {
   font-family: var(--font-family-source-han-sans-jp);
   font-style: var(--font-style-normal);
@@ -199,6 +219,12 @@ li {
   list-style: none;
 }
 
+img {
+  vertical-align: top;
+  font-size: 0;
+  line-height: 0;
+}
+
 .link-underline {
   border: none;
 }
@@ -208,6 +234,18 @@ li {
 
 .section-reset {
   padding: 120px 0 0;
+}
+
+.section-call-to-action-style {
+  padding: 72px 0;
+}
+
+.section-site-map-style {
+  padding: 32px 0;
+}
+
+.section-footer-style {
+  padding: 32px 0;
 }
 
 .section-title-layout {
@@ -313,9 +351,6 @@ header {
   font-size: var(--font-size-14);
   text-align: center;
 }
-.header-area .header-contents-area .header-nav-list .tel-number {
-  display: flex;
-}
 .header-area .header-contents-area .header-nav-list .tel-number a {
   text-align: center;
   letter-spacing: var(--character-spacing-1-8);
@@ -412,6 +447,121 @@ header {
 }
 .nav-menu-area .nav-menu-list li a {
   text-align: center;
+}
+
+.call-to-action-area {
+  background-color: var(--sub-color-2);
+}
+.call-to-action-area .call-to-action-area-layout {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+.call-to-action-area .call-to-action-area-layout .call-to-action-btn {
+  margin: 48px auto;
+}
+.call-to-action-area .call-to-action-area-layout .call-to-action-btn a {
+  display: inline-block;
+  line-height: var(--line-spacing-44);
+  color: var(--white);
+  background-color: var(--sub-color);
+  padding: 32px;
+  text-align: center;
+}
+.call-to-action-area .call-to-action-area-layout .call-to-action-btn a:hover {
+  background-color: var(--white);
+  border: 3px solid var(--sub-color);
+  color: var(--sub-color);
+  padding: 29px;
+}
+.call-to-action-area .call-to-action-area-layout .tel-call-to-action-area .pc-font-size-sm-normal {
+  line-height: var(--line-spacing-40);
+  letter-spacing: var(--character-spacing-1-6);
+}
+.call-to-action-area .call-to-action-area-layout .tel-call-to-action-area .flex-pc-only {
+  display: flex;
+  justify-content: center;
+}
+.call-to-action-area .call-to-action-area-layout .tel-call-to-action-area .flex-pc-only .tel-text-call-to-action {
+  margin-right: 24px;
+}
+.call-to-action-area .call-to-action-area-layout .tel-call-to-action-area .flex-pc-only .tel-number-call-to-action a {
+  text-align: center;
+  letter-spacing: var(--character-spacing-1-8);
+  cursor: default;
+  pointer-events: none;
+}
+.call-to-action-area .call-to-action-area-layout .tel-call-to-action-area .flex-pc-only .tel-number-call-to-action a::before {
+  content: "";
+  display: inline-block;
+  background-image: url(../img/free-call-icon.svg);
+  background-size: cover;
+  width: 50px;
+  height: 39.76px;
+  margin-right: 8px;
+  vertical-align: text-bottom;
+}
+.call-to-action-area .call-to-action-area-layout .tel-call-to-action-area .tel-info-call-to-action {
+  margin-top: 16px;
+}
+
+.eye-catch-area {
+  height: 450px;
+  margin: 0;
+  padding: 0;
+}
+.eye-catch-area img {
+  width: 100%;
+  height: 450px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 15%;
+     object-position: 50% 15%;
+}
+
+.site-map-area-layout {
+  width: 960px;
+  margin: 0 auto;
+}
+.site-map-area-layout .site-map-title-list li {
+  margin: 24px 0;
+}
+.site-map-area-layout .site-map-title-list .site-map-flex-pc-only {
+  display: flex;
+  justify-content: space-evenly;
+}
+.site-map-area-layout .site-map-title-list .arrow-icon-add-area {
+  background-image: url(../img/arrow.png);
+  transform: rotate(90deg);
+  display: inline-block;
+  background-size: cover;
+  width: var(--font-size-14);
+  height: var(--font-size-14);
+  vertical-align: -10%;
+  margin-left: 7px;
+}
+
+footer {
+  background-color: var(--main-color);
+}
+footer .footer-menu {
+  width: 860px;
+  margin: 0 auto;
+}
+footer .footer-menu .footer-menu-list {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-menu .footer-menu-list li a {
+  color: white;
+  text-align: center;
+}
+footer .footer-menu .footer-menu-list li a:hover {
+  border-bottom-color: var(--white);
+}
+footer .copyright {
+  text-align: center;
+  padding-top: 32px;
 }
 
 .mv-area {
@@ -765,7 +915,7 @@ header {
   margin: 24px 32px;
 }
 .information-contents-area .info-category-date-layout .info-category {
-  margin: 30px 32px 24px 0;
+  margin: 24px 32px 24px 0;
 }
 .information-contents-area .info-category-date-layout .info-category h3 {
   letter-spacing: var(--character-spacing-1-4);

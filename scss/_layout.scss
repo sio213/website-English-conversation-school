@@ -63,8 +63,6 @@ header {
       }
 
       .tel-number {
-        display: flex;
-
         a {
           text-align: center;
           letter-spacing: var(--character-spacing-1-8);
@@ -188,5 +186,147 @@ header {
         text-align: center;
       }
     }
+  }
+}
+
+// Call to action
+.call-to-action-area {
+  background-color: var(--sub-color-2);
+
+  .call-to-action-area-layout {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+  
+    .call-to-action-btn {
+      margin: 48px auto;
+
+      a {
+        display: inline-block;
+        line-height: var(--line-spacing-44);
+        color: var(--white);
+        background-color: var(--sub-color);
+        padding: 32px;
+        text-align: center;
+
+        &:hover {
+          background-color: var(--white);
+          border: 3px solid var(--sub-color);
+          color: var(--sub-color);
+          padding: 29px;
+        }
+      }
+    }
+
+    .tel-call-to-action-area {
+      .pc-font-size-sm-normal {
+        line-height: var(--line-spacing-40);
+        letter-spacing: var(--character-spacing-1-6);
+      }
+
+      .flex-pc-only {
+        display: flex;
+        justify-content: center;
+
+        .tel-text-call-to-action {
+          margin-right: 24px;
+        }
+  
+        .tel-number-call-to-action {
+          a {
+            text-align: center;
+            letter-spacing: var(--character-spacing-1-8);
+            cursor: default;
+            pointer-events: none;
+  
+            &::before {
+              content: '';
+              display: inline-block;
+              background-image: url(../img/free-call-icon.svg);
+              background-size: cover;
+              width: 50px;
+              height: 39.76px;
+              margin-right: 8px;
+              vertical-align: text-bottom;
+            }
+          }
+        }
+      }
+      .tel-info-call-to-action {
+        margin-top: 16px;
+      }
+    }
+  }
+}
+
+// アイキャッチ
+.eye-catch-area {
+  height: 450px;
+  margin: 0;
+  padding: 0;
+
+  img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    object-position: 50% 15%;
+  }
+}
+
+// サイトマップ
+.site-map-area-layout {
+  width: 960px;
+  margin: 0 auto;
+
+  .site-map-title-list {
+
+    li {
+      margin: 24px 0;
+    }
+
+    .site-map-flex-pc-only {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .arrow-icon-add-area {
+        background-image: url(../img/arrow.png);
+        transform: rotate(90deg);
+        display: inline-block;
+        background-size: cover;
+        width: var(--font-size-14);
+        height: var(--font-size-14);
+        vertical-align: -10%;
+        margin-left: 7px;
+    }
+  }
+}
+
+// フッター
+footer {
+  background-color: var(--main-color);
+  
+  .footer-menu {
+    width: 860px;
+    margin: 0 auto;
+
+    .footer-menu-list {
+      display: flex;
+      justify-content: space-between;
+
+      li a {
+        color: white;
+        text-align: center;
+
+        &:hover {
+          border-bottom-color: var(--white);
+        }
+      }
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    padding-top: 32px;
   }
 }

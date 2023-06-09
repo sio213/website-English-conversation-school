@@ -7,9 +7,24 @@
   }
 }
 
-// セクションタグのcssの変更用（bottomの余白削除）
+// セクションタグの余白を変更（bottomの余白削除）
 .section-reset {
   padding: 120px 0 0;
+}
+
+// Call to action用の余白
+.section-call-to-action-style {
+  padding: 72px 0;
+}
+
+// サイトナビゲーション用の余白
+.section-site-map-style {
+  padding: 32px 0;
+}
+
+// フッター用の余白
+.section-footer-style {
+  padding: 32px 0;
 }
 
 // セクションタイトルのレイアウト

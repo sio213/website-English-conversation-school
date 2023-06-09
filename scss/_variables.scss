@@ -83,6 +83,16 @@
   color: var(--white);
 }
 
+.pc-font-size-xs-bold-sitemap-title {
+  font-family: var(--font-family-source-han-sans-jp);
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-14);
+  line-height: var(--line-spacing-24);
+  letter-spacing: var(--character-spacing-1-4);
+  color: var(--text-color);
+}
+
 .pc-font-size-xl-medium {
   font-family: var(--font-family-source-han-sans-jp);
   font-style: var(--font-style-normal);
@@ -93,7 +103,7 @@
   color: var(--text-color);
 }
 
-.pc-font-size-lg-mediun {
+.pc-font-size-lg-medium {
   font-family: var(--font-family-source-han-sans-jp);
   font-style: var(--font-style-normal);
   font-weight: var(--font-weight-medium);
@@ -161,6 +171,16 @@
   line-height: var(--line-spacing-32);
   letter-spacing: var(--character-spacing-0);
   color: var(--text-color);
+}
+
+.pc-font-size-xs-normal-footer {
+  font-family: var(--font-family-source-han-sans-jp);
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-normal);
+  font-size: var(--font-size-14);
+  line-height: var(--line-spacing-20);
+  letter-spacing: var(--character-spacing-0);
+  color: var(--white);
 }
 
 .pc-font-size-xs-normal-info-date {
