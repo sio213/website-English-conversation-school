@@ -254,6 +254,7 @@
 
 // スクール検索＋講師紹介＋受講生の声のエリア設定
 .two-column-layout {
+  max-width: 1160px;
   margin: 0 auto;
   display: flex;
   justify-content: space-evenly;
@@ -389,6 +390,7 @@
   padding: 0 24px 32px;
   display: flex;
 
+  // TODO 画像がブラウザごとに正円にならないので要修正
   .teacher-img {
     margin-right: 32px;
     width: 160px;

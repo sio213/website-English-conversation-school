@@ -767,6 +767,7 @@ footer .copyright {
   }
 }
 .two-column-layout {
+  max-width: 1160px;
   margin: 0 auto;
   display: flex;
   justify-content: space-evenly;
