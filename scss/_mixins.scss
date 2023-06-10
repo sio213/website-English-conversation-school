@@ -6,7 +6,7 @@
     $maxWidth: 960px;
   }
 
-  @if $breakpoint == Md {
+  @if $breakpoint == md {
     $maxWidth: 768px;
   }
 

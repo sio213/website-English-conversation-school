@@ -201,7 +201,9 @@
   color: var(--text-color);
 }
 
-* {
+*,
+::before,
+::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -439,7 +441,7 @@ header {
   padding: 5px 13px;
 }
 
-@media screen and (max-width: 1160px) {
+@media screen and (max-width: 768px) {
   .header-area .header-contents-area {
     margin-left: 30px;
     margin-right: 30px;
@@ -763,7 +765,7 @@ footer .copyright {
   border: 3px solid var(--white);
 }
 
-@media screen and (max-width: 1160px) {
+@media screen and (max-width: 768px) {
   .lesson-area .lesson-contents-area, .lesson-area .lesson-search-btn-area {
     width: 95%;
   }
@@ -790,7 +792,7 @@ footer .copyright {
   padding-top: 16px;
 }
 
-@media screen and (max-width: 1160px) {
+@media screen and (max-width: 768px) {
   .two-column-layout {
     display: block;
   }
@@ -856,7 +858,7 @@ footer .copyright {
   text-align: center;
 }
 
-@media screen and (max-width: 1160px) {
+@media screen and (max-width: 768px) {
   .section-padding-bottom-reset {
     padding: 120px 0;
   }
@@ -877,7 +879,7 @@ footer .copyright {
   padding-bottom: 0;
 }
 
-@media screen and (max-width: 1160px) {
+@media screen and (max-width: 768px) {
   .two-column-layout-right-side {
     width: auto;
   }
@@ -917,6 +919,8 @@ footer .copyright {
   margin-bottom: 24px;
 }
 .teacher-profile .teacher-introduce .teacher-detail-btn {
+  display: flex;
+  justify-content: end;
   margin-top: 32px;
 }
 .teacher-profile .teacher-introduce .teacher-detail-btn a {
@@ -932,7 +936,7 @@ footer .copyright {
   margin-left: var(--font-size-14);
 }
 
-@media screen and (max-width: 1160px) {
+@media screen and (max-width: 768px) {
   .introducing-the-teacher-area-layout {
     width: 768px;
     margin: 0 auto;
@@ -992,7 +996,7 @@ footer .copyright {
   display: inline-block;
 }
 
-@media screen and (max-width: 1160px) {
+@media screen and (max-width: 768px) {
   .students-voice-area-layout {
     margin: 0 auto;
   }
@@ -1024,7 +1028,7 @@ footer .copyright {
   margin-right: 32px;
 }
 
-@media screen and (max-width: 1160px) {
+@media screen and (max-width: 768px) {
   .information-contents-area {
     width: 95%;
   }

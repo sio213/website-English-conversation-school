@@ -414,6 +414,8 @@
     }
 
     .teacher-detail-btn {
+      display: flex;
+      justify-content: end;
       margin-top: 32px;
 
       a {
